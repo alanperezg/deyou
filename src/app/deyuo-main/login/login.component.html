@@ -1,0 +1,15 @@
+<div class="formContainer">
+
+  <h1>Iniciar Sesión</h1>
+
+    <form #f="ngForm" (ngSubmit)="access(f)" >      
+      <input type="text" ngModel name="usuario" placeholder="Usuario" required>     
+      <div class="form-group">          
+          <input [type]="hide ? 'password' : 'text'" ngModel name="contrasena" placeholder="Contraseña" required>
+          <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </div>
+      <button type="submit" [disabled]="!f.valid" class="btn btn-primary btn-block btn-large">Ingresar</button>
+    </form>
+</div>
+
+<img class="img-background" src="{{SRC}}" alt="">
