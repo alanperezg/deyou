@@ -31,8 +31,15 @@
   border-bottom: 2px solid black;
   width: 45vw;
 }
-
-.formContainer input.invalid{
+div.alert{
+  height: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: -15px;
+  margin-bottom: 5px;
+}
+.formContainer input.invalide{
   border: none;
   background-color: rgba(247, 0, 0, 0);
   border-bottom: 2px solid red;

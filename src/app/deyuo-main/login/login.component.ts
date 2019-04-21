@@ -11,7 +11,8 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
   acceso: Acceso;
-  hide:boolean = true;
+  hide:boolean = true; 
+  validAccess: boolean = true;
   SRC: string = 'assets/img/sushi.gif';
   constructor(private router: Router, private route: ActivatedRoute, private globalService: GlobalService) { }
   
@@ -24,8 +25,14 @@ export class LoginComponent implements OnInit {
         formulario.controls.contrasena.value));
     console.log(this.acceso);
     if(this.globalService.getStatusLog()){
+      this.validAccess = true;
       this.router.navigate(['/contacto'],{relativeTo: this.route});
     }
+    this.validAccess = false;
     formulario.reset();
+  }
+
+  onChangeInput(){
+    this.validAccess = true;
   }
 }
