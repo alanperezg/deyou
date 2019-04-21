@@ -12,6 +12,8 @@ import {FlexLayoutModule} from '@angular/flex-layout';
 import { MenuComponent } from './deyuo-main/menu/menu.component';
 import { ContactoComponent } from './deyuo-main/contacto/contacto.component';
 import { LoginComponent } from './deyuo-main/login/login.component';
+import { MainUsuarioComponent } from './deyuo-main/main-usuario/main-usuario.component';
+import { MainEmpleadoComponent } from './deyuo-main/main-empleado/main-empleado.component';
 
 
 @NgModule({
@@ -22,7 +24,9 @@ import { LoginComponent } from './deyuo-main/login/login.component';
     HomeComponent,
     MenuComponent,
     ContactoComponent,
-    LoginComponent
+    LoginComponent,
+    MainUsuarioComponent,
+    MainEmpleadoComponent
   ],
   imports: [
     BrowserModule,

@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DeyuoMainComponent } from './deyuo-main.component';
+import { MainUsuarioComponent } from './main-usuario.component';
 
-describe('DeyuoMainComponent', () => {
-  let component: DeyuoMainComponent;
-  let fixture: ComponentFixture<DeyuoMainComponent>;
+describe('MainUsuarioComponent', () => {
+  let component: MainUsuarioComponent;
+  let fixture: ComponentFixture<MainUsuarioComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DeyuoMainComponent ]
+      declarations: [ MainUsuarioComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DeyuoMainComponent);
+    fixture = TestBed.createComponent(MainUsuarioComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
