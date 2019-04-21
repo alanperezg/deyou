@@ -12,7 +12,7 @@ import { Subject } from 'rxjs';
     private statusLog: boolean = false;
     private usuarios: Acceso[] = [
         new Acceso(this.lastId++, 'admin', 'admin', 1),
-        new Acceso(this.lastId++, 'guest', '12345', 2)
+        new Acceso(this.lastId++, 'guest', '123', 2)
     ];
 
     private notificarStatusLog(){

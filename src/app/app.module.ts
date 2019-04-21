@@ -15,7 +15,6 @@ import { LoginComponent } from './deyuo-main/login/login.component';
 import { MainUsuarioComponent } from './deyuo-main/main-usuario/main-usuario.component';
 import { MainEmpleadoComponent } from './deyuo-main/main-empleado/main-empleado.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
