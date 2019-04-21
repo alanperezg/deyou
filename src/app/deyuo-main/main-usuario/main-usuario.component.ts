@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
+import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
+
+
 
 @Component({
   selector: 'app-main-usuario',
@@ -8,7 +11,11 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class MainUsuarioComponent implements OnInit {
   id: number;
-  constructor(private router: Router, private route: ActivatedRoute) { }
+  constructor(private router: Router, private route: ActivatedRoute, configCarousel: NgbCarouselConfig) {
+    configCarousel.interval = 3000;
+    configCarousel.keyboard = true;
+    configCarousel.showNavigationIndicators = false;
+   }
 
   ngOnInit() {
     this.route.params.subscribe((params)=>{
