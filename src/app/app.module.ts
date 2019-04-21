@@ -7,7 +7,8 @@ import { AppComponent } from './app.component';
 import { DeyuoMainComponent } from './deyuo-main/deyuo-main.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
-import { MatToolbarModule, MatButtonModule, MatIconModule, MatSidenavModule } from '@angular/material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatToolbarModule, MatButtonModule, MatIconModule, MatSidenavModule, MatMenuModule, MatMenuItem } from '@angular/material';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import { MenuComponent } from './deyuo-main/menu/menu.component';
 import { ContactoComponent } from './deyuo-main/contacto/contacto.component';
@@ -29,13 +30,15 @@ import { MainEmpleadoComponent } from './deyuo-main/main-empleado/main-empleado.
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,  
     AppRoutingModule,
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
     FlexLayoutModule,
     MatSidenavModule,
-    FormsModule
+    FormsModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

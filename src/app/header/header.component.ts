@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {MatToolbarModule, MatIconModule, MatButtonModule} from '@angular/material';
+import {MatToolbarModule, MatIconModule, MatButtonModule, MatMenuModule} from '@angular/material';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import { Subscription } from 'rxjs';
 import { GlobalService } from '../global.service';

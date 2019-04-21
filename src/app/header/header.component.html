@@ -19,8 +19,15 @@
         </ul>
     </div>
     <div fxFlex fxLayout fxLayoutAlign="end" fxHide.gt-xs>
-            <button mat-icon-button class="min-menu" type="button" mat-button (click)="sidenav.open()">
+            <button mat-icon-button class="min-menu" type="button" mat-button [matMenuTriggerFor]="belowMenu">
                 <mat-icon>line_weight</mat-icon>
-            </button>
+            </button> 
+            <mat-menu #belowMenu="matMenu" xPosition="after">
+                <a  mat-menu-item  routerLink="/menu"><mat-icon>restaurant_menu</mat-icon>Menu</a>
+                <a  mat-menu-item  routerLink="/contacto"><mat-icon>contact_phone</mat-icon> Contacto</a>
+                <a  mat-menu-item  *ngIf="!Log" routerLink="/login"><mat-icon>lock_open</mat-icon>Login</a>
+                <a  mat-menu-item  *ngIf="Log" routerLink="/home"><mat-icon>account_circle</mat-icon>Usuario</a>                
+            </mat-menu>          
     </div>
+    
 </mat-toolbar>
