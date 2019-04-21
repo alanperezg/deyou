@@ -36,6 +36,15 @@ a:active { color: rgb(70, 67, 67); }
 mat-toolbar{
     border-radius: 3px;
 }
+/* Position dropMenu resolve
+.mat-menu-item{
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+    padding-top: 50px;
+}*/
  
 @media(max-width: 959px){
     mat-toolbar{

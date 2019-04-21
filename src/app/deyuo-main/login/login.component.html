@@ -8,7 +8,7 @@
           <input [class.invalide]="!validAccess" [type]="hide ? 'password' : 'text'" ngModel name="contrasena" (change)="onChangeInput()" placeholder="Contraseña" required>
           <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
       </div>
-      <div [hidden]="validAccess" class="alert alert-danger">Datos incorrectos</div>
+      <div *ngIf="!validAccess" role="alert" class="alert alert-danger"><strong>Datos incorrectos</strong></div>
 
       <button type="submit" [disabled]="!f.valid" class="btn btn-primary btn-block btn-large">Ingresar</button>      
     </form>

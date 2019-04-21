@@ -20,13 +20,18 @@ export class LoginComponent implements OnInit {
   }
 
   access(formulario: NgForm) {
+    
     this.acceso = Object.assign({},
       this.globalService.validarAcceso(formulario.controls.usuario.value,
         formulario.controls.contrasena.value));
-    console.log(this.acceso);
+    
     if(this.globalService.getStatusLog()){
       this.validAccess = true;
-      this.router.navigate(['/contacto'],{relativeTo: this.route});
+      if(this.acceso.tipoUsuario == 1){
+        this.router.navigate(['/empleado',this.acceso.id],{relativeTo: this.route});
+      }else{
+      this.router.navigate(['/usuario',this.acceso.id],{relativeTo: this.route});
+      }
     }
     this.validAccess = false;
     formulario.reset();
