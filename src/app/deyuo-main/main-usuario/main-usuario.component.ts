@@ -11,13 +11,12 @@ import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 })
 export class MainUsuarioComponent implements OnInit {
   id: number;
-  MiPedidoImg: string = 'assets/img/boxIconBlue.png';
+  MiPedidoImg: string = 'assets/img/newProductIcon.png';
   CrearPedidoImg: string = 'assets/img/surveyIcon.png';
-  GuiaPedidoImg: string = 'assets/img/locationIcon.png';
   MiCarritoImg: string = 'assets/img/shopIcon.png';
-  SlideImg1: string ='https://lorempixel.com/900/500?r=4';
-  SlideImg2: string ='https://lorempixel.com/900/500?r=5';
-  SlideImg3: string ='https://lorempixel.com/900/500?r=6';
+  SlideImg1: string ='assets/img/slide1Img.jpg';
+  SlideImg2: string ='assets/img/slide2Img.jpg';
+  SlideImg3: string ='assets/img/slide3Img.jpg';
 
   constructor(private router: Router, private route: ActivatedRoute, configCarousel: NgbCarouselConfig) {
     configCarousel.interval = 3000;

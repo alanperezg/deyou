@@ -16,15 +16,20 @@
     flex-direction: column;
     display: inline-block; 
     align-items: center;
-    align-content: center;    
+    align-content: center;
+    width: 100px;       
 }
-
+.icons-item:hover, .icons-item:active {
+    background: rgba(138, 126, 126, 0.452);
+    color: rgb(182, 15, 15);   
+}
 .icons-item img{
     height: 90px;
+    padding-top: 10px;
 }
 p.slide-descrip{
-    color: rgb(231, 216, 216);
-    font-weight: 400;
+    font-weight: 700;
+    font-size: 30px;
 }
 p.icon-title{
     font-size: 15px;
