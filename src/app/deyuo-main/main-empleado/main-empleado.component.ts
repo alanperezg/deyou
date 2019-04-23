@@ -8,6 +8,13 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class MainEmpleadoComponent implements OnInit {
   id: number;
+  OrdenesImg: string = 'assets/img/bookIcon.png';
+  AbrirCuentaImg: string = 'assets/img/pencilIcon.png';
+  ProductosImg: string = 'assets/img/foodIcon.png';
+  UsuariosImg: string = 'assets/img/userIcon.png';
+  GastosImg: string = 'assets/img/CoinsBlueCircle.png';
+  ReportesImg: string = 'assets/img/surveyIcon.png';
+
   constructor(private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
