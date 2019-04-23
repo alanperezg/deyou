@@ -16,6 +16,9 @@ import { ContactoComponent } from './deyuo-main/contacto/contacto.component';
 import { LoginComponent } from './deyuo-main/login/login.component';
 import { MainUsuarioComponent } from './deyuo-main/main-usuario/main-usuario.component';
 import { MainEmpleadoComponent } from './deyuo-main/main-empleado/main-empleado.component';
+import { PromoMainComponent } from './deyuo-main/promo-main/promo-main.component';
+import { MicarritoMainComponent } from './deyuo-main/micarrito-main/micarrito-main.component';
+import { SidenavListComponent } from './header/sidenav-list/sidenav-list.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,10 @@ import { MainEmpleadoComponent } from './deyuo-main/main-empleado/main-empleado.
     ContactoComponent,
     LoginComponent,
     MainUsuarioComponent,
-    MainEmpleadoComponent
+    MainEmpleadoComponent,
+    PromoMainComponent,
+    MicarritoMainComponent,
+    SidenavListComponent
   ],
   imports: [
     BrowserModule,
