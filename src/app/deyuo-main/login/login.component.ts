@@ -6,7 +6,21 @@ import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-login',
-  templateUrl: './login.component.html',
+  //templateUrl: './login.component.html',
+  template:`
+  <div class="formContainer">
+  <h1>Iniciar Sesión</h1>
+    <form #f="ngForm" (ngSubmit)="access(f)" >
+      <input type="text" [class.invalide]="!validAccess" ngModel name="usuario" placeholder="Usuario" (change)="onChangeInput()" required>     
+      <div class="form-group">
+          <input [class.invalide]="!validAccess" [type]="hide ? 'password' : 'text'" ngModel name="contrasena" (change)="onChangeInput()" placeholder="Contraseña" required>
+          <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </div>
+      <div *ngIf="!validAccess" role="alert" class="alert alert-danger"><strong>Datos incorrectos</strong></div>
+      <button type="submit" [disabled]="!f.valid" class="btn btn-primary btn-block btn-large">Ingresar</button>      
+    </form>
+</div>
+<img class="img-background" src="{{SRC}}" alt="">`,
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
