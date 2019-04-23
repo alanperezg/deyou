@@ -8,7 +8,7 @@ import { Router, ActivatedRoute } from '@angular/router';
   selector: 'app-login',
   //templateUrl: './login.component.html',
   template:`
-  <div class="formContainer">
+  <div class="formContainer"> 
   <h1>Iniciar Sesión</h1>
     <form #f="ngForm" (ngSubmit)="access(f)" >
       <input type="text" [class.invalide]="!validAccess" ngModel name="usuario" placeholder="Usuario" (change)="onChangeInput()" required>     
