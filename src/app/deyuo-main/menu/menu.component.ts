@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Acceso } from '../../models/acceso';
+import { GlobalService } from '../../global.service';
 
 @Component({
   selector: 'app-menu',
@@ -7,9 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  constructor() { }
+  datos: Acceso[];
+  constructor(private globalSerivice: GlobalService) { }
 
   ngOnInit() {
+    this.datos = this.globalSerivice.getAccesos();
   }
 
 }

@@ -16,10 +16,16 @@ const routes: Routes = [
   {path:'login', component:LoginComponent},
   {path:'contacto', component:ContactoComponent},
   {path:'empleado/:id', component:MainEmpleadoComponent},
-  {path:'usuario/:id', component:MainUsuarioComponent},
-  {path:'menu',component:MenuComponent},
+  {path:'usuario/:id', component:MainUsuarioComponent, children:[
+    {path:'micarrito', component:MicarritoMainComponent},
+    {path:'promociones',component:PromoMainComponent}
+  ]},
+  {path:'menu',component:MenuComponent, children:[
+    {path:'pedido?nuevo', component:MenuComponent}
+  ]},
   {path:'micarrito', component:MicarritoMainComponent},
   {path:'promociones',component:PromoMainComponent}
+  
 ];
 
 @NgModule({

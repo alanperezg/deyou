@@ -23,6 +23,9 @@ import { Subject } from 'rxjs';
       return this.statusLog;
     }
 
+    getAccesos(): Acceso[]{
+      return this.usuarios.slice();
+    }
     validarAcceso(usuario: string, contrasenia: string): Acceso{
       let User : Acceso;
       const Index = this.usuarios.findIndex(user => user.usuario == usuario && user.contrasena == contrasenia);
