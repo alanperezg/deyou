@@ -7,6 +7,8 @@ import { MenuComponent } from './deyuo-main/menu/menu.component';
 import { MainEmpleadoComponent } from './deyuo-main/main-empleado/main-empleado.component';
 import { MainUsuarioComponent } from './deyuo-main/main-usuario/main-usuario.component';
 import { DeyuoMainComponent } from './deyuo-main/deyuo-main.component';
+import { MicarritoMainComponent } from './deyuo-main/micarrito-main/micarrito-main.component';
+import { PromoMainComponent } from './deyuo-main/promo-main/promo-main.component';
 
 const routes: Routes = [
   {path:'', redirectTo:'/home',pathMatch:'full'},
@@ -14,8 +16,16 @@ const routes: Routes = [
   {path:'login', component:LoginComponent},
   {path:'contacto', component:ContactoComponent},
   {path:'empleado/:id', component:MainEmpleadoComponent},
-  {path:'usuario/:id', component:MainUsuarioComponent},
-  {path:'menu',component:MenuComponent}
+  {path:'usuario/:id', component:MainUsuarioComponent, children:[
+    {path:'micarrito', component:MicarritoMainComponent},
+    {path:'promociones',component:PromoMainComponent}
+  ]},
+  {path:'menu',component:MenuComponent, children:[
+    {path:'pedido?nuevo', component:MenuComponent}
+  ]},
+  {path:'micarrito', component:MicarritoMainComponent},
+  {path:'promociones',component:PromoMainComponent}
+  
 ];
 
 @NgModule({
